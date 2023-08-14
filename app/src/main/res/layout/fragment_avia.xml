@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background03">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/line" />
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/line" />
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+    </LinearLayout>
+    
+    <FrameLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/player"
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:src="@drawable/player"/>
+        
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/enemyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/energyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/bombsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.avia2.game.core.library.CustomImageButton
+        android:id="@+id/home"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.avia2.game.core.library.CustomImageButton
+        android:id="@+id/pause"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/pause"
+        app:layout_constraintEnd_toStartOf="@+id/pause"
+        app:layout_constraintStart_toEndOf="@+id/home"
+        app:layout_constraintTop_toTopOf="@+id/pause">
+
+        <TextView
+            android:id="@+id/energy"
+            style="@style/BasicText"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:background="@drawable/energy02"
+            android:paddingStart="25dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/brown"
+            tools:text="00:30" />
+
+        <TextView
+            android:id="@+id/scores"
+            style="@style/BasicText"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/score"
+            android:paddingStart="25dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/brown"
+            tools:text="3000" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

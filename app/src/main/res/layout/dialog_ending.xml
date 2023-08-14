@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:background="@drawable/complete01">
+
+        <TextView
+            android:id="@+id/scores"
+            style="@style/BasicText"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:background="@drawable/score"
+            android:paddingStart="25dp"
+            android:layout_marginTop="80dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:paddingBottom="2dp"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scores">
+
+            <com.avia2.game.core.library.CustomImageButton
+                android:id="@+id/home"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/home"/>
+
+            <com.avia2.game.core.library.CustomImageButton
+                android:id="@+id/restart"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/restart"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

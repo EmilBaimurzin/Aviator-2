@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.avia2.game.ui.start.FragmentStart"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentAvia"
+            app:destination="@id/fragmentAvia" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAvia"
+        android:name="com.avia2.game.ui.avia.FragmentAvia"
+        android:label="FragmentAvia" >
+        <action
+            android:id="@+id/action_fragmentAvia_to_dialogEnding"
+            app:destination="@id/dialogEnding" />
+        <action
+            android:id="@+id/action_fragmentAvia_to_dialogPause"
+            app:destination="@id/dialogPause" />
+        <argument
+            android:name="isContinue"
+            app:argType="boolean" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogEnding"
+        android:name="com.avia2.game.ui.dialogs.DialogEnding"
+        android:label="DialogEnding" >
+        <argument
+            android:name="scores"
+            app:argType="integer" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogPause"
+        android:name="com.avia2.game.ui.dialogs.DialogPause"
+        android:label="DialogPause" />
+</navigation>

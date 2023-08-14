@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/background03"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@drawable/background02"
+        android:id="@+id/foreground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.avia2.game.core.library.CustomImageButton
+        android:id="@+id/newGameButton"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:src="@drawable/new_game"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/continueButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.avia2.game.core.library.CustomImageButton
+        android:id="@+id/continueButton"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/_continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.avia2.game.core.library.CustomImageButton
+        android:id="@+id/exitButton"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:src="@drawable/exit"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/continueButton" />
+
+
+    <TextView
+        style="@style/BasicText"
+        android:id="@+id/privacyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/privacy_policy"
+        android:textColor="#0000FF"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
